@@ -15,7 +15,7 @@ class Users {
         `
         pool.query(queryGetAllUsers, (error, result) => {
             if(error) {
-                callback(err, null)
+                callback(error, null)
             }else {
                 const data = result.rows
                 const user = data.map(el => new Users(
