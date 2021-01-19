@@ -3,11 +3,6 @@ const connectionString = 'postgresql://xggpnfutfmjeqh:85d7352a17f75c2846032e1005
 
 const pool = new Pool({
     connectionString: connectionString,
-    user: "postgres",
-    password:'postgres',
-    host: "localhost",
-    database: "db_ach_sample",
-    port: 5432
 })
 
 module.exports = pool
