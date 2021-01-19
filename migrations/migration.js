@@ -9,11 +9,8 @@ CREATE TABLE IF NOT EXISTS "Users" (
 )
 `
 
-pool.query(queryUsers, (error, res) => {
-    if(error){
-        throw error
-    }
-    else {
-        console.log(`success creating user table`)
-    }
+pool.query(queryUsers, (err, res) => {
+    console.log(err, "<<< errors")
+    console.log(res, "<<< res")
+    pool.end();
 })
