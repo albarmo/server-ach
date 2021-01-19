@@ -1,4 +1,6 @@
-require("dotenv").config();
+if (process.env.NODE_ENV === 'development') {
+    require('dotenv').config()
+    }
 const environment = 'development';
 const express = require('express')
 const app = express()
